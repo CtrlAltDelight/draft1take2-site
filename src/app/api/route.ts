@@ -19,7 +19,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
 		<language>en-us</language>
 		<itunes:category text="TV &amp; Film"> <itunes:category text="Film Reviews" /></itunes:category>
 		<itunes:explicit>false</itunes:explicit>
-		<itunes:author>Luke Chigges & Callie Waligora</itunes:author>
+		<itunes:author>Luke Chigges and Callie Waligora</itunes:author>
         <link>https://draft1take2.com</link>
 		<itunes:owner><itunes:email>pod@chigges.com</itunes:email><itunes:name>Luke Chigges</itunes:name></itunes:owner>
         ${episodes
