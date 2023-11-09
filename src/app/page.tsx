@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { PrismaClient } from "@prisma/client";
+import art from '../../public/images/show_artwork.png'
 
 const prisma = new PrismaClient();
 
@@ -15,13 +16,19 @@ async function getEpisodes() {
 export default async function Home() {
 	const episodes = await getEpisodes();
 	return (
-		<div className="bg-gray-400">
-			<div className="bg-gray-600 md:w-5/6 w-auto m-auto">
-				<header className='bg-gray-800 h-32 flex'>
+		<div className="bg-black">
+			<div className="bg-brown md:w-5/6 w-auto m-auto">
+				<header className='bg-maroon text-tan h-32 flex rounded-b-3xl'>
 					<h2 className='font-serif ml-5 self-center text-6xl'>Draft 1, Take 2</h2>
 				</header>
-				<main className="flex items-center min-h-screen flex-col pt-20 gap-y-14">
-					<section className="w-5/6">
+				<main className="flex text-orange items-center min-h-screen flex-col pt-20 gap-y-14">
+					<Image
+						className="mx-auto"
+						src={art}
+						alt="An image of beer and film reels"
+						width={900}
+					/>
+					<section className="w-5/6 bg-black rounded-2xl p-4 shadow-black fbg-gradient-to-tan from-black">
 						<h2 className="text-center text-2xl font-bold">Meet the hosts!</h2>
 						<div className='flex justify-around'>
 							<div className='flex flex-col items-center'>
@@ -34,7 +41,7 @@ export default async function Home() {
 							</div>
 						</div>
 					</section>
-					<section className='w-5/6'>
+					<section className="w-5/6 bg-black rounded-2xl p-4">
 						<h2 className="text-center text-2xl font-bold">Listen to our episodes!</h2>
 						<div className="">
 							{episodes.map((episode: any) => 
@@ -43,7 +50,7 @@ export default async function Home() {
 						</div>
 					</section>
 				</main>
-				<footer className="p-4 bg-gray-800">
+				<footer className="p-4 bg-maroon rounded-t-2xl">
 					<p className='font-serif'>Questions? Email us at pod@chigges.com</p>
 				</footer>
 			</div>
