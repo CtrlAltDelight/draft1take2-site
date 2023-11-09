@@ -14,8 +14,14 @@ export async function GET(req: NextRequest, res: NextResponse) {
     <rss version="2.0">
       <channel>
         <title>Draft 1, Take 2</title>
+        <description>Movies, movies, movies. Let's talk about them!</description>
+		<itunes:image>https://draft1take2.com/images/show_artwork.jpg</itunes:image>
+		<language>en-us</language>
+		<itunes:category text="TV &amp; Film"> <itunes:category text="Film Reviews" /></itunes:category>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:author>Luke Chigges & Callie Waligora</itunes:author>
         <link>https://draft1take2.com</link>
-        <description>Movies, movies, movies.</description>
+		<itunes:owner><itunes:email>pod@chigges.com</itunes:email><itunes:name>Luke Chigges</itunes:name></itunes:owner>
         ${episodes
           .map(
             (episode: any) => `
