@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export async function GET(req: NextRequest, res: NextResponse) {
   // Fetch your podcast episodes data
-  const episodes = await prisma.post.findMany({
+  const episodes = await prisma.episode.findMany({
     where: { published: true },
   });
 
@@ -13,9 +13,9 @@ export async function GET(req: NextRequest, res: NextResponse) {
   const feed = `<?xml version="1.0" encoding="UTF-8"?>
     <rss version="2.0">
       <channel>
-        <title>Your Podcast Title</title>
-        <link>Your Website URL</link>
-        <description>Your Podcast Description</description>
+        <title>Draft 1, Take 2</title>
+        <link>https://draft1take2.com</link>
+        <description>Movies, movies, movies.</description>
         ${episodes
           .map(
             (episode: any) => `
