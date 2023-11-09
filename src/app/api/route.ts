@@ -11,7 +11,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
 
   // Generate RSS feed content
   const feed = `<?xml version="1.0" encoding="UTF-8"?>
-    <rss version="2.0">
+    <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
       <channel>
         <title>Draft 1, Take 2</title>
         <description>Movies, movies, movies. Let's talk about them!</description>
