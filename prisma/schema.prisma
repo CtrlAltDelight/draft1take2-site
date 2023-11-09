@@ -21,12 +21,16 @@ model Episode {
   id             String           @id @default(cuid())
   title          String
   content        String?
+  fileType       String
   number         Int
   published      Boolean          @default(false)
+  publishedDate	 DateTime         @map("pub_date")
   createdAt      DateTime         @default(now()) @map("created_at")
-  audioUrl       String?
+  audioUrl       String
   episodeNumber  Int              @map("episode_number")
-  episodeLength  Int
+  duration       Int
+  link           String?
+  explicit       Boolean          @default(false)
   authorId       String?
   authors        User[]           @relation("EpisodeAuthors")
   EpisodeAuthors EpisodeAuthors[]
