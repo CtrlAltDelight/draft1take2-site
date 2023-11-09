@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-export async function getEpisodes() {
+async function getEpisodes() {
   // Fetch your podcast episodes data
   const episodes = await prisma.post.findMany({
     where: { published: true },
