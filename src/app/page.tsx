@@ -41,7 +41,7 @@ export default async function Home() {
 								/>
 							</div>
 							<div className='rounded col-span-2 bg-sas-maroon p-2 text-black flex items-center justify-center'>Callie J. Waligora</div>
-							<div className='rounded row-span-2 col-span-2 bg-sas-tan p-2 text-black flex items-center justify-center'>Here is where I'd put her description... IF I HAD ONE!</div>
+							<div className='rounded row-span-2 col-span-2 bg-sas-tan p-2 text-black flex items-center justify-center'>Here is where I would put her description... IF I HAD ONE!</div>
 						</div>
 						<div className='grid grid-rows-3 grid-cols-3 gap-4'>
 							<div className='rounded col-span-2 bg-sas-maroon p-2 text-black flex items-center justify-center'>
